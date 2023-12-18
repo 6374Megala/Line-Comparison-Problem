@@ -28,13 +28,13 @@ public class Line implements Comparable<Line>{
 
         Line otherLine = (Line) obj;
 
-        return Double.compare(otherLine.x1, x1) == 0 &&
-                Double.compare(otherLine.y1, y1) == 0 &&
-                Double.compare(otherLine.x2, x2) == 0 &&
-                Double.compare(otherLine.y2, y2) == 0;
+        return Double.compare(otherLine.getX1(), getX1()) == 0 &&
+                Double.compare(otherLine.getY1(), getY1()) == 0 &&
+                Double.compare(otherLine.getX2(), getX2()) == 0 &&
+                Double.compare(otherLine.getY2(), getY2()) == 0;
     }
     public double length(){
-        double length=Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
+        double length=Math.sqrt(Math.pow((getX2()-getX1()),2)+Math.pow((getY2()-getY1()),2));
         return length;
     }
 
